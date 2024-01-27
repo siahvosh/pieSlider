@@ -1,11 +1,11 @@
 <template>
-  <v-app-bar flat>
-    <v-app-bar-title>
-      <v-icon icon="mdi-circle-slice-4" />
+<!--  <v-app-bar flat>-->
+<!--&lt;!&ndash;    <v-app-bar-title>&ndash;&gt;-->
+<!--&lt;!&ndash;      <v-icon icon="mdi-circle-slice-4" />&ndash;&gt;-->
 
-      Base Preset
-    </v-app-bar-title>
-  </v-app-bar>
+<!--&lt;!&ndash;      Base Preset&ndash;&gt;-->
+<!--&lt;!&ndash;    </v-app-bar-title>&ndash;&gt;-->
+<!--  </v-app-bar>-->
 </template>
 
 <script setup>
