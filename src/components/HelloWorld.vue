@@ -4,6 +4,20 @@
 
     <div class="card">
 
+      <div  style="
+                justify-content: start;
+                position: absolute;
+                z-index: 11111;
+                display: flex;
+                left: 20px;
+                top: 20px;
+                color: white;
+
+              ">
+        <img style="position: absolute; width: 170px; transform: translate(0, -50px)" src="file:///C:/Users/PC/Desktop/5a1c35692297a7.1765082915117981211417.png" alt="">
+        <img style="position: absolute; width: 300px; transform: translate(0, -50px)" src="file:///C:/Users/PC/Desktop/%E2%80%94Pngtree%E2%80%94lemon%20slice%20set_5390256.png" alt="">
+      </div>
+
       <div class="text-center"
            style="
                 justify-content: center;
@@ -19,7 +33,6 @@
         <span style="transition: all 1s ease; opacity: 1; position: absolute;  font-weight: 500; letter-spacing: 10px; font-size: 50px;"> lemone pie </span>
 
       </div>
-
       <div class="text-center"
            style="
                 position: relative;
@@ -35,11 +48,12 @@
         <span style="transition: all 1s ease; position: absolute ;opacity: 0;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 5px; "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. it amet, consectetur adipi Cum doloribus dolorum eligendi error et id impedit laborum natus nobis numquam perferendis quaerat quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
         <span style="transition: all 1s ease; position: absolute ;opacity: 1;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 3px; "> is numquam perferendis quaerat it amet, consectetur adipisicing el it amet, conit amet, consectetur adipisectet ur adipi it amet, consectetur adipi it. Cum  it amet, consectetur adipisicing elit. Cum  it amet, consectetur adipisicing elit. Cum  quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
       </div>
+
       <div class="main">
         <div class="strawberry" style="background: #d75935">
           <img class="img-1" src="file:///C:/Users/PC/Desktop/sia3016_Arrange_halved_strawberries_in_a_circle_on_top_of_a_thi_75fb7036-1481-4ec5-98a3-d01aa42d9641%20-%20Copy.png" alt="">
         </div>
-        <div class="strawberry" style="background: #e5d36d">
+        <div class="strawberry" style="background: #aea04d">
           <img class="img-2" src="file:///C:/Users/PC/Desktop/lemon1.png" alt="">
         </div>
         <div @click="next(1)"
@@ -128,6 +142,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 
