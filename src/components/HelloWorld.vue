@@ -10,7 +10,7 @@
                 position: relative;
                 z-index: 11111;
                 display: flex;
-                margin: 10% 0 0 0;
+                margin: 8% 0 0 0;
                 color: white;
 
               "
@@ -24,15 +24,16 @@
            style="
                 position: relative;
                 z-index: 11111;
-                margin: 13% ;
+                margin: 80px auto ;
                 display: flex;
                 color: white;
                 justify-content: center;
+                width: 500px;
 
               "
       >
-        <span style="transition: all 1s ease; position: absolute ;opacity: 0;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 3px; "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum doloribus dolorum eligendi error et id impedit laborum natus nobis numquam perferendis quaerat quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
-        <span style="transition: all 1s ease; position: absolute ;opacity: 1;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 3px; "> is numquam perferendis quaerat quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
+        <span style="transition: all 1s ease; position: absolute ;opacity: 0;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 5px; "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. it amet, consectetur adipi Cum doloribus dolorum eligendi error et id impedit laborum natus nobis numquam perferendis quaerat quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
+        <span style="transition: all 1s ease; position: absolute ;opacity: 1;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 3px; "> is numquam perferendis quaerat it amet, consectetur adipisicing el it amet, conit amet, consectetur adipisectet ur adipi it amet, consectetur adipi it. Cum  it amet, consectetur adipisicing elit. Cum  it amet, consectetur adipisicing elit. Cum  quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
       </div>
       <div class="main">
         <div class="strawberry" style="background: #d75935">
