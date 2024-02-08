@@ -1,9 +1,6 @@
 <template>
 
-
-
     <div class="card">
-
       <div  style="
                 justify-content: start;
                 position: absolute;
@@ -12,10 +9,9 @@
                 left: 20px;
                 top: 20px;
                 color: white;
-
               ">
         <img style="position: absolute; width: 170px; transform: translate(0, -50px)" src="file:///C:/Users/PC/Desktop/5a1c35692297a7.1765082915117981211417.png" alt="">
-        <img style="position: absolute; width: 300px; transform: translate(0, -50px)" src="file:///C:/Users/PC/Desktop/%E2%80%94Pngtree%E2%80%94lemon%20slice%20set_5390256.png" alt="">
+        <img style="position: absolute; width: 300px; transform: translate(100%, 50px)" src="file:///C:/Users/PC/Desktop/%E2%80%94Pngtree%E2%80%94lemon%20slice%20set_5390256.png" alt="">
       </div>
 
       <div class="text-center"
@@ -26,9 +22,7 @@
                 display: flex;
                 margin: 8% 0 0 0;
                 color: white;
-
-              "
-      >
+              ">
         <span style="transition: all 1s ease; opacity: 0; position: absolute; font-weight: 500; letter-spacing: 15px; font-size: 50px;"> strawberry pie </span>
         <span style="transition: all 1s ease; opacity: 1; position: absolute;  font-weight: 500; letter-spacing: 10px; font-size: 50px;"> lemone pie </span>
 
@@ -79,22 +73,12 @@
 </template>
 
 <script setup>
-
-
-
   let main = document.getElementsByClassName('main')
   let text = document.getElementsByClassName('text-center')
   let num = 1
 
-
-
-
   function next(e){
-
-    console.log({text: text})
-
     num += e
-
 
     if(num >= main[0].children.length - 1)
       num = 0
@@ -158,7 +142,7 @@
 
 .img-1, .img-2{
   position: absolute;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   /*transform:  rotate(100deg);*/
 
 }
