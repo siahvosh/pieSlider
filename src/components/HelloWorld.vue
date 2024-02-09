@@ -1,12 +1,23 @@
 <template>
 
   <div id="container" class="container">
-    <div class="txt-slider">
+    <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
           <span class="title">nami nectar</span>
           <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
-
+      <div class="txt-item1">
+        <span class="title">bubi nectar</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+      </div>
+      <div class="txt-item1">
+        <span class="title">bubi nectar</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+      </div>
+      <div class="txt-item1">
+        <span class="title">bubi nectar</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+      </div>
     </div>
     <div id="slider" class="pic-sliders" >
       <div class="item">
@@ -38,28 +49,55 @@
 
 <script setup>
 
-  let sliderNumber = -1
-  let cardNumber = 0
+  let currentCard = 0
+  let lastCard = 0
 
   function showCard(val){
-    cardNumber = val
+
+    currentCard = val
     let slider  = document.getElementById("slider")
+    let txtSlider  = document.getElementById("txt-slider")
     let container  = document.getElementById("container")
     let slideChilds  = slider.children
-
-    // console.log({slider: sliderNumber})
-
+    let textChild = txtSlider.children
 
 
-    console.log({val : cardNumber})
-    for (let i = 0; i <= slideChilds.length; i++){
-      slideChilds[0].style.transform= "translate(-550px, 0)"
-      slideChilds[0].style.scale= "1.1"
-    }
-      slideChilds[cardNumber].style.transform= "translate(0, 0)"
-      slideChilds[cardNumber].style.scale= "1.2"
-      container.style.background = "#3f6235"
-      slideChilds[0].style.opacity= "0"
+    console.log({val: val})
+    console.log({txtSlider: textChild})
+    console.log({lst: lastCard})
+    console.log({currentCard: currentCard})
+
+
+
+  if(lastCard < currentCard) {
+
+    textChild[lastCard].style.transform = "translate(0px, -300px)"
+    textChild[currentCard].style.transform = "translate(0px, 0)"
+
+
+
+    slideChilds[lastCard].style.transform = "translate(-550px, 0)"
+    slideChilds[lastCard].style.scale = "1.1"
+    slideChilds[lastCard].style.opacity = "0"
+
+    slideChilds[currentCard].style.transform = "translate(0, 0)"
+
+    slideChilds[currentCard].style.scale = "1.2"
+  }
+
+
+    if(currentCard === 1)
+      container.style.background= "radial-gradient(circle, rgba(150, 190, 138, 100) 5%, rgba(63,98,53,100) 90%)";
+    if(currentCard === 2)
+      container.style.background= "radial-gradient(circle, rgba(185, 185, 131, 100) 5%, rgba(144,144,92,100) 90%)";
+    if(currentCard === 3)
+      container.style.background= "radial-gradient(circle, rgba(220, 117, 63, 100) 5%, rgba(188,70,7,100) 90%)";
+
+
+
+    lastCard = currentCard
+
+    // console.log({last: lastCard})
 
 
   }
@@ -79,7 +117,7 @@
   position: relative;
   width: 1300px;
   height: 650px;
-  background: #b21616;
+  background: radial-gradient(circle, rgb(199, 100, 100) 5%, rgba(178,22,22,100) 90%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -98,7 +136,7 @@
 
 .item{
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   scale: 1.2;
 }
 
@@ -112,13 +150,14 @@
   scale: 1.2;
   position: absolute;
   right: 0;
-  margin: 55px 90px 0 0;
+  margin: 55px 110px 0 0;
 }
 
-.item1{
+.item1 {
   position: relative;
-  transform: translate(590px, 0);
-  transition: all 0.5s ease;
+  transform: translate(800px, 0);
+  transition: all 0.4s ease;
+  scale: 0.8;
 }
 .img-3{
   width: 300px;
@@ -132,7 +171,7 @@
   scale: 1.2;
   position: absolute;
   right: 0;
-  margin: 55px 90px 0 0;
+  margin: 55px 110px 0 0;
 }
 
 .txt-slider{
@@ -149,7 +188,7 @@
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 50px;
-  margin: 20px 0 0 10px;
+  margin: 20px 0 0 25px;
   display: flex;
   text-transform: uppercase;
 
@@ -185,5 +224,13 @@
   cursor: pointer;
 }
 
-
+.txt-item{
+  border: 2px solid white;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.txt-item1{
+  position: absolute;
+  transition: all 0.4s ease;
+}
 </style>
