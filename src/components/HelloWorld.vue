@@ -93,11 +93,6 @@
     main[0].children[num].children[0].style.transform = "rotate(15deg)";
     text[0].children[num].style.opacity = "1";
     text[1].children[num].style.opacity = "1";
-
-
-
-
-
   }
 
 </script>
