@@ -227,13 +227,13 @@
 
 .txt-item{
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   transform: translate(0, 0px);
 
 }
 .txt-item1{
   position: absolute;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   transform: translate(0, 100px);
 }
 </style>
