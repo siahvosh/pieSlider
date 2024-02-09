@@ -1,98 +1,58 @@
 <template>
 
-    <div class="card">
-      <div  style="
-                justify-content: start;
-                position: absolute;
-                z-index: 11111;
-                display: flex;
-                left: 20px;
-                top: 20px;
-                color: white;
-              ">
-        <img style="position: absolute; width: 170px; transform: translate(0, -50px)" src="file:///C:/Users/PC/Desktop/5a1c35692297a7.1765082915117981211417.png" alt="">
-        <img style="position: absolute; width: 300px; transform: translate(100%, 50px)" src="file:///C:/Users/PC/Desktop/%E2%80%94Pngtree%E2%80%94lemon%20slice%20set_5390256.png" alt="">
+  <div class="container">
+    <div class="txt-slider">
+      <div class="txt-item">
+          <span class="title">nami nectar</span>
+          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
 
-      <div class="text-center"
-           style="
-                justify-content: center;
-                position: relative;
-                z-index: 11111;
-                display: flex;
-                margin: 8% 0 0 0;
-                color: white;
-              ">
-        <span style="transition: all 1s ease; opacity: 0; position: absolute; font-weight: 500; letter-spacing: 15px; font-size: 50px;"> strawberry pie </span>
-        <span style="transition: all 1s ease; opacity: 1; position: absolute;  font-weight: 500; letter-spacing: 10px; font-size: 50px;"> lemone pie </span>
-
+    </div>
+    <div id="slider" class="pic-sliders">
+      <div class="item">
+        <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Luffy.png" alt="">
+        <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/luffy-can.png" alt="">
       </div>
-      <div class="text-center"
-           style="
-                position: relative;
-                z-index: 11111;
-                margin: 80px auto ;
-                display: flex;
-                color: white;
-                justify-content: center;
-                width: 500px;
-
-              "
-      >
-        <span style="transition: all 1s ease; position: absolute ;opacity: 0;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 5px; "> Lorem ipsum dolor sit amet, consectetur adipisicing elit. it amet, consectetur adipi Cum doloribus dolorum eligendi error et id impedit laborum natus nobis numquam perferendis quaerat quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
-        <span style="transition: all 1s ease; position: absolute ;opacity: 1;text-shadow: 0 0 8px black; font-weight: 0; letter-spacing: 3px; "> is numquam perferendis quaerat it amet, consectetur adipisicing el it amet, conit amet, consectetur adipisectet ur adipi it amet, consectetur adipi it. Cum  it amet, consectetur adipisicing elit. Cum  it amet, consectetur adipisicing elit. Cum  quasi ratione recusandae, reiciendis ullam vero voluptate voluptatem?</span>
+      <div class="item1">
+        <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Zoro.png" alt="">
+        <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Zoro-can.png" alt="">
       </div>
+    </div>
+    <div class="avatar">
+      <div ></div>
 
-      <div class="main">
-        <div class="strawberry" style="background: #d75935">
-          <img class="img-1" src="file:///C:/Users/PC/Desktop/sia3016_Arrange_halved_strawberries_in_a_circle_on_top_of_a_thi_75fb7036-1481-4ec5-98a3-d01aa42d9641%20-%20Copy.png" alt="">
-        </div>
-        <div class="strawberry" style="background: #aea04d">
-          <img class="img-2" src="file:///C:/Users/PC/Desktop/lemon1.png" alt="">
-        </div>
-        <div @click="next(1)"
-          style="
-           position: absolute;
-           width: 30px !important;
-           height: 30px;
-           border-radius: 50px;
-           cursor: pointer;
-           top: 50%;
-           left: 2%;
-           background: transparent linear-gradient(to left, #fafafa, #c3b2b2);
-          "
-        >
-          <v-icon style="margin: 0 2px 0 2px ">mdi-chevron-left</v-icon>
-        </div>
-      </div>
 
     </div>
 
 
+    <div @click="next(1)" style="cursor: pointer; position: absolute; width: 300px"> click </div>
+  </div>
 
 </template>
 
 <script setup>
-  let main = document.getElementsByClassName('main')
-  let text = document.getElementsByClassName('text-center')
-  let num = 1
+
+  let sliderNumber = -1
+
 
   function next(e){
-    num += e
+    sliderNumber += e
+    if (sliderNumber > 1)
+      sliderNumber = 0
 
-    if(num >= main[0].children.length - 1)
-      num = 0
 
-    for (let i = 0; i < main[0].children.length - 1; i++) {
-      main[0].children[i].style.opacity = "0";
-      main[0].children[i].children[0].style.transform = "rotate(-5deg)";
-      text[0].children[i].style.opacity = "0";
-      text[1].children[i].style.opacity = "0";
-    }
-    main[0].children[num].style.opacity = "1";
-    main[0].children[num].children[0].style.transform = "rotate(15deg)";
-    text[0].children[num].style.opacity = "1";
-    text[1].children[num].style.opacity = "1";
+      console.log({sliderNumber: sliderNumber})
+    let slider  = document.getElementById("slider")
+    let slideChilds  = slider.children
+
+
+
+    console.log({slider: slider})
+    console.log({slider: slideChilds})
+    // slider.style.overflow = "hidden"
+
+
+
   }
 
 </script>
@@ -100,90 +60,104 @@
 <style>
 @import url('https://fonts.cdnfonts.com/css/fantasy');
 
-*{
-  font-family: 'Fantasy', sans-serif ;
-}
+/**{*/
+/*  font-family: 'Fantasy', sans-serif ;*/
+/*}*/
 
-
-.main{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  overflow: hidden
-}
-
-.card{
+.container{
   position: relative;
   width: 1200px;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  left: 50%;
+  height: 650px;
+  background: orange;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic-sliders{
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  background: red;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
 
-
-.strawberry{
-  transition: all 1s ease;
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-  position: absolute;
-
-}
-
-
-.img-1, .img-2{
-  position: absolute;
-  transition: all 0.3s ease;
-  /*transform:  rotate(100deg);*/
-
+.item{
+  position: relative;
 }
 
 .img-1{
-  width: 65%;
-  top: 50%;
-  left: 17%;
+  width: 230px;
+  position: absolute;
+  left: 50px;
+
 }
 .img-2{
-  width: 60%;
-  top: 50%;
-  left: 20%;
-}
-/*img:hover{*/
-/*  transform:  rotate(100deg);*/
-/*  animation: rotate 1s ease;*/
-
-
-/*}*/
-
-@keyframes rotate{
-  0%{
-    transform: rotate(0deg);
-  }
-
-  100%{
-    transform: rotate(15deg);
-  }
+  width: 250px;
+  scale: 1.2;
+  position: absolute;
+  right: 0;
+  margin: 55px 60px 0 0;
 }
 
-/*;DataCenterHint =>*/
-/*;    default (ping based)*/
-/*;    playfab/australiaeast*/
-/*;    playfab/brazilsouth*/
-/*;    playfab/centralus*/
-/*;    playfab/eastasia*/
-/*;    playfab/eastus*/
-/*;    playfab/japaneast*/
-/*;    playfab/northeurope*/
-/*;    playfab/southafricanorth*/
-/*;    playfab/southcentralus*/
-/*;    playfab/southeastasia*/
-/*;    playfab/uaenorth*/
-/*;    playfab/westeurope*/
-/*;    playfab/westus*/
+.item1{
+  position: relative;
+  transform: translate(550px, 0);
+}
+.img-3{
+  width: 300px;
+  position: absolute;
+  left: 40px;
+
+}
+.img-4{
+  width: 250px;
+  scale: 1.2;
+  position: absolute;
+  right: 0;
+  margin: 55px 60px 0 0;
+}
+
+.txt-slider{
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  top: 200px;
+  left: 30px;
+  background: red;
+  overflow: hidden;
+}
+
+.title{
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin: 20px 0 0px 10px;
+  display: flex;
+  text-transform: uppercase;
+
+}
+
+.description{
+  color: white;
+  display: flex !important;
+  margin: 10px 0 0px 20px;
+}
+
+.avatar{
+  position: absolute;
+  width: 10%;
+  height: 70%;
+  top: 100px;
+  right: 50px;
+  background: red;
+  overflow: hidden;
+}
+
 
 
 </style>
