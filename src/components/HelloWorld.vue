@@ -4,19 +4,19 @@
     <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
           <span class="title">nami nectar</span>
-          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
         <span class="title">bubi nectar</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
         <span class="title">bubi nectar</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
         <span class="title">bubi nectar</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
     </div>
     <div id="slider" class="pic-sliders" >
@@ -71,8 +71,8 @@
 
   if(lastCard < currentCard) {
 
-    textChild[lastCard].style.transform = "translate(0px, -300px)"
-    textChild[currentCard].style.transform = "translate(0px, 0)"
+    textChild[lastCard].style.transform = "translate(0px, -380px)"
+    textChild[currentCard].style.transform = "translate(0px, -180PX)"
 
 
 
@@ -81,9 +81,9 @@
     slideChilds[lastCard].style.opacity = "0"
 
     slideChilds[currentCard].style.transform = "translate(0, 0)"
-    textChild[currentCard].style.transform = "translate(0px, -170px)"
-
     slideChilds[currentCard].style.scale = "1.1"
+    slideChilds[currentCard].style.opacity = "1"
+
   }
 
 
@@ -138,7 +138,7 @@
 .item{
   position: relative;
   transition: all 0.4s ease;
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .img-1{
@@ -178,7 +178,7 @@
 .txt-slider{
   position: absolute;
   width: 35%;
-  height: 30%;
+  height: 40%;
   top: 210px;
   left: 30px;
   overflow: hidden;
