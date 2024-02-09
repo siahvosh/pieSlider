@@ -77,12 +77,13 @@
 
 
     slideChilds[lastCard].style.transform = "translate(-550px, 0)"
-    slideChilds[lastCard].style.scale = "1.1"
+    slideChilds[lastCard].style.scale = "1"
     slideChilds[lastCard].style.opacity = "0"
 
     slideChilds[currentCard].style.transform = "translate(0, 0)"
+    textChild[currentCard].style.transform = "translate(0px, -170px)"
 
-    slideChilds[currentCard].style.scale = "1.2"
+    slideChilds[currentCard].style.scale = "1.1"
   }
 
 
@@ -225,12 +226,14 @@
 }
 
 .txt-item{
-  border: 2px solid white;
   position: relative;
   transition: all 0.4s ease;
+  transform: translate(0, 0px);
+
 }
 .txt-item1{
   position: absolute;
   transition: all 0.4s ease;
+  transform: translate(0, 100px);
 }
 </style>
