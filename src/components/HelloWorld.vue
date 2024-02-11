@@ -3,19 +3,19 @@
   <div id="container" class="container">
     <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
-          <span class="title">nami nectar</span>
+          <span class="title">luffy fizz</span>
           <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
-        <span class="title">bubi nectar</span>
+        <span class="title">zero zest</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
-        <span class="title">bubi nectar</span>
+        <span class="title">sanji spark</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
       <div class="txt-item1">
-        <span class="title">bubi nectar</span>
+        <span class="title">nami nectar</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
     </div>
@@ -74,8 +74,6 @@
     textChild[lastCard].style.transform = "translate(0px, -380px)"
     textChild[currentCard].style.transform = "translate(0px, -180PX)"
 
-
-
     slideChilds[lastCard].style.transform = "translate(-550px, 0)"
     slideChilds[lastCard].style.scale = "1"
     slideChilds[lastCard].style.opacity = "0"
@@ -83,7 +81,18 @@
     slideChilds[currentCard].style.transform = "translate(0, 0)"
     slideChilds[currentCard].style.scale = "1.1"
     slideChilds[currentCard].style.opacity = "1"
+  }else{
 
+    textChild[lastCard].style.transform = "translate(0px, 380px)"
+    textChild[currentCard].style.transform = "translate(0px, -180PX)"
+
+    slideChilds[lastCard].style.transform = "translate(550px, 0)"
+    slideChilds[lastCard].style.scale = "1"
+    slideChilds[lastCard].style.opacity = "0"
+
+    slideChilds[currentCard].style.transform = "translate(0px, 0)"
+    slideChilds[currentCard].style.scale = "1.1"
+    slideChilds[currentCard].style.opacity = "1"
   }
 
 
