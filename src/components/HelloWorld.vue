@@ -52,9 +52,11 @@
   let currentCard = 0
   let lastCard = 0
 
+
   function showCard(val){
 
     currentCard = val
+
     let slider  = document.getElementById("slider")
     let txtSlider  = document.getElementById("txt-slider")
     let container  = document.getElementById("container")
@@ -68,41 +70,77 @@
     console.log({currentCard: currentCard})
 
 
+  //
+  // if(lastCard < currentCard) {
+  //
+  //   textChild[lastCard].style.transform = "translate(0px, -380px)"
+  //   textChild[currentCard].style.transform = "translate(0px, -180PX)"
+  //
+  //   slideChilds[lastCard].style.transform = "translate(-550px, 0)"
+  //   slideChilds[lastCard].style.scale = "1"
+  //   slideChilds[lastCard].style.opacity = "0"
+  //
+  //   slideChilds[currentCard].style.transform = "translate(0, 0)"
+  //   slideChilds[currentCard].style.scale = "1.1"
+  //   slideChilds[currentCard].style.opacity = "1"
+  // }else{
+  //
+  //   textChild[lastCard].style.transform = "translate(0px, 380px)"
+  //   textChild[currentCard].style.transform = "translate(0px, -180PX)"
+  //
+  //   slideChilds[lastCard].style.transform = "translate(550px, 0)"
+  //   slideChilds[lastCard].style.scale = "1"
+  //   slideChilds[lastCard].style.opacity = "0"
+  //
+  //   slideChilds[currentCard].style.transform = "translate(0px, 0)"
+  //   slideChilds[currentCard].style.scale = "1.1"
+  //   slideChilds[currentCard].style.opacity = "1"
+  // }
+  //
+  //   if (currentCard === 0)
+  //     container.style.background= "radial-gradient(circle, rgb(199, 100, 100) 5%, rgba(178,22,22,100) 90%)";
+  //   if(currentCard === 1)
+  //     container.style.background= "radial-gradient(circle, rgba(150, 190, 138, 100) 5%, rgba(63,98,53,100) 90%)";
+  //   if(currentCard === 2)
+  //     container.style.background= "radial-gradient(circle, rgba(185, 185, 131, 100) 5%, rgba(144,144,92,100) 90%)";
+  //   if(currentCard === 3)
+  //     container.style.background= "radial-gradient(circle, rgba(220, 117, 63, 100) 5%, rgba(188,70,7,100) 90%)";
 
-  if(lastCard < currentCard) {
+    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0) => {
+      textChild[index].style.transform = `translate(0px, ${yTranslate}px)`;
+      slideChilds[index].style.transform = `translate(${xTranslate}px, 0)`;
+      slideChilds[index].style.scale = scale;
+      slideChilds[index].style.opacity = opacity;
+    };
 
-    textChild[lastCard].style.transform = "translate(0px, -380px)"
-    textChild[currentCard].style.transform = "translate(0px, -180PX)"
+    if (lastCard < currentCard) {
+      transformElements(lastCard, -380, -550);
+      transformElements(currentCard, -180, 0, 1.1, 1);
+    } else {
+      transformElements(lastCard, 380, 550);
+      transformElements(currentCard, -180, 0, 1.1, 1);
+    }
 
-    slideChilds[lastCard].style.transform = "translate(-550px, 0)"
-    slideChilds[lastCard].style.scale = "1"
-    slideChilds[lastCard].style.opacity = "0"
+    const setBackground = (colors) => {
+      container.style.background = colors[currentCard];
+    };
 
-    slideChilds[currentCard].style.transform = "translate(0, 0)"
-    slideChilds[currentCard].style.scale = "1.1"
-    slideChilds[currentCard].style.opacity = "1"
-  }else{
-
-    textChild[lastCard].style.transform = "translate(0px, 380px)"
-    textChild[currentCard].style.transform = "translate(0px, -180PX)"
-
-    slideChilds[lastCard].style.transform = "translate(550px, 0)"
-    slideChilds[lastCard].style.scale = "1"
-    slideChilds[lastCard].style.opacity = "0"
-
-    slideChilds[currentCard].style.transform = "translate(0px, 0)"
-    slideChilds[currentCard].style.scale = "1.1"
-    slideChilds[currentCard].style.opacity = "1"
-  }
-
-
-    if(currentCard === 1)
-      container.style.background= "radial-gradient(circle, rgba(150, 190, 138, 100) 5%, rgba(63,98,53,100) 90%)";
-    if(currentCard === 2)
-      container.style.background= "radial-gradient(circle, rgba(185, 185, 131, 100) 5%, rgba(144,144,92,100) 90%)";
-    if(currentCard === 3)
-      container.style.background= "radial-gradient(circle, rgba(220, 117, 63, 100) 5%, rgba(188,70,7,100) 90%)";
-
+    switch (currentCard) {
+      case 0:
+        setBackground(["radial-gradient(circle, rgb(199, 100, 100) 5%, rgba(178,22,22,100) 90%)", null, null, null]);
+        break;
+      case 1:
+        setBackground([null, "radial-gradient(circle, rgba(150, 190, 138, 100) 5%, rgba(63,98,53,100) 90%)", null, null]);
+        break;
+      case 2:
+        setBackground([null, null, "radial-gradient(circle, rgba(185, 185, 131, 100) 5%, rgba(144,144,92,100) 90%)", null]);
+        break;
+      case 3:
+        setBackground([null, null, null, "radial-gradient(circle, rgba(220, 117, 63, 100) 5%, rgba(188,70,7,100) 90%)"]);
+        break;
+      default:
+        setBackground(["default background"]);
+    }
 
 
     lastCard = currentCard
@@ -237,7 +275,7 @@
 .txt-item{
   position: relative;
   transition: all 0.5s ease;
-  transform: translate(0, 0px);
+  transform: translate(0, -30px);
 
 }
 .txt-item1{
