@@ -1,5 +1,4 @@
 <template>
-
   <div id="container" class="container">
     <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
@@ -44,28 +43,22 @@
       <img @click="showCard(3)" class="avatar" src="file:///C:/Users/PC/Desktop/img-1/nami-profile.png" alt="">
     </div>
   </div>
-
 </template>
 
 <script setup>
-
   let currentCard = 0
   let lastCard = 0
 
-
   function showCard(val){
-
     currentCard = val
 
     let slideChild  = document.getElementById("slider").children
     let textChild  = document.getElementById("txt-slider").children
     let container  = document.getElementById("container")
 
-
     console.log({lastCard: lastCard})
     console.log({currentCard: currentCard})
     console.log({len: textChild.length})
-
 
     const transformElements = (index, yTranslate, xTranslate = 0, scale = 0.8, opacity = 0) => {
       textChild[index].style.transform = `translate(0px, ${yTranslate}px)`;
@@ -74,7 +67,6 @@
       slideChild[index].style.opacity = opacity;
     };
 
-
     if (lastCard > currentCard) {
       for (let i = currentCard + 1; i < textChild.length; i++)
         slideChild[i].style.transform = "translateX(700px)"
@@ -82,7 +74,6 @@
       transformElements(lastCard, 380, 700);
       transformElements(currentCard, -180, 0, 1.1, 1);
     }
-
     else {
       for(let i = 0; i < currentCard; i++)
         slideChild[i].style.transform = "translateX(-700px)"
@@ -91,11 +82,11 @@
       transformElements(currentCard, -180, 0, 1.1, 1);
     }
 
+    lastCard = currentCard
 
     const setBackground = (colors) => {
       container.style.background = colors[currentCard];
     };
-
     switch (currentCard) {
       case 0:
         setBackground(["radial-gradient(circle, rgb(199, 100, 100) 5%, rgba(178,22,22,100) 90%)", null, null, null]);
@@ -112,25 +103,13 @@
       default:
         setBackground(["default background"]);
     }
-
-
-    lastCard = currentCard
-
-
-
-
   }
-
-
-
 </script>
 
 <style>
 @import url('https://fonts.cdnfonts.com/css/fantasy');
 
-/**{*/
-/*  font-family: 'Fantasy', sans-serif ;*/
-/*}*/
+
 
 .container{
   position: relative;
@@ -141,9 +120,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-
 }
 
+/*image slider--------------------------------------------------------------------*/
 .pic-sliders{
   position: absolute;
   width: 50%;
@@ -153,13 +132,17 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
-
 .item{
   position: relative;
   transition: all 0.4s ease;
   scale: 1.1;
 }
-
+.item1 {
+  position: relative;
+  transform: translate(700px, 0);
+  transition: all 0.3s ease;
+  scale: 0.8;
+}
 .img-1{
   width: 230px;
   position: absolute;
@@ -171,13 +154,6 @@
   position: absolute;
   right: 0;
   margin: 55px 110px 0 0;
-}
-
-.item1 {
-  position: relative;
-  transform: translate(700px, 0);
-  transition: all 0.3s ease;
-  scale: 0.8;
 }
 .img-3{
   width: 300px;
@@ -194,6 +170,7 @@
   margin: 55px 110px 0 0;
 }
 
+/*text slider--------------------------------------------------------------------*/
 .txt-slider{
   position: absolute;
   width: 35%;
@@ -202,7 +179,6 @@
   left: 30px;
   /*overflow: hidden;*/
 }
-
 .title{
   color: white;
   font-weight: 800;
@@ -213,13 +189,24 @@
   text-transform: uppercase;
 
 }
-
 .description{
   color: white;
   display: flex !important;
   margin: 10px 0 0 10px;
 }
+.txt-item{
+  position: relative;
+  transition: all 0.5s ease;
+  /*transform: translate(0, -30px);*/
 
+}
+.txt-item1{
+  position: absolute;
+  transition: all 0.5s ease;
+  transform: translate(0, 100px);
+}
+
+/*avatar box--------------------------------------------------------------------*/
 .avatars{
   position: absolute;
   width: 10%;
@@ -234,7 +221,6 @@
 
 
 }
-
 .avatar{
   border-radius: 180%;
   width: 100px;
@@ -244,15 +230,5 @@
   cursor: pointer;
 }
 
-.txt-item{
-  position: relative;
-  transition: all 0.5s ease;
-  /*transform: translate(0, -30px);*/
 
-}
-.txt-item1{
-  position: absolute;
-  transition: all 0.5s ease;
-  transform: translate(0, 100px);
-}
 </style>
