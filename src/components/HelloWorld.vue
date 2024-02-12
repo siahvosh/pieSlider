@@ -19,7 +19,7 @@
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
     </div>
-    <div id="slider" class="pic-sliders" >
+    <div id="slider" class="pic-sliders">
       <div class="item">
         <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Luffy.png" alt="">
         <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/luffy-can.png" alt="">
@@ -57,28 +57,39 @@
 
     currentCard = val
 
-    let slider  = document.getElementById("slider")
-    let txtSlider  = document.getElementById("txt-slider")
+    let slideChild  = document.getElementById("slider").children
+    let textChild  = document.getElementById("txt-slider").children
     let container  = document.getElementById("container")
-    let slideChild  = slider.children
-    let textChild = txtSlider.children
 
 
-    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0) => {
+    console.log({lastCard: lastCard})
+    console.log({currentCard: currentCard})
+
+
+
+    const transformElements = (index, yTranslate, xTranslate = 0, scale = 0.8, opacity = 0) => {
       textChild[index].style.transform = `translate(0px, ${yTranslate}px)`;
       slideChild[index].style.transform = `translate(${xTranslate}px, 0)`;
       slideChild[index].style.scale = scale;
       slideChild[index].style.opacity = opacity;
     };
 
-    if (lastCard < currentCard) {
+
+    if (lastCard <= currentCard) {
       transformElements(lastCard, -380, -550);
       transformElements(currentCard, -180, 0, 1.1, 1);
+
     }
     else {
       transformElements(lastCard, 380, 550);
       transformElements(currentCard, -180, 0, 1.1, 1);
+      for(let i = currentCard + 1; i < textChild.length; i++)
+        slideChild[i].style.transform = "translateX(550px)"
+
     }
+    for(let i = 0; i < currentCard; i++)
+      slideChild[i].style.transform = "translateX(-550px)"
+
 
     const setBackground = (colors) => {
       container.style.background = colors[currentCard];
@@ -128,6 +139,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
+
 }
 
 .pic-sliders{
@@ -137,7 +150,6 @@
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
 
 }
 
@@ -162,8 +174,8 @@
 
 .item1 {
   position: relative;
-  transform: translate(800px, 0);
-  transition: all 0.4s ease;
+  transform: translate(1000px, 0);
+  transition: all 0.3s ease;
   scale: 0.8;
 }
 .img-3{
@@ -187,7 +199,7 @@
   height: 40%;
   top: 210px;
   left: 30px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .title{
