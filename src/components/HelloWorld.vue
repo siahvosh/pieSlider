@@ -71,15 +71,15 @@
       for (let i = currentCard + 1; i < textChild.length; i++)
         slideChild[i].style.transform = "translateX(700px)"
 
-      transformElements(lastCard, 380, 700);
-      transformElements(currentCard, -180, 0, 1.1, 1);
+      transformElements(lastCard, 500, 700);
+      transformElements(currentCard, -150, 0, 1.1, 1);
     }
     else {
       for(let i = 0; i < currentCard; i++)
         slideChild[i].style.transform = "translateX(-700px)"
 
-      transformElements(lastCard, -380, -700);
-      transformElements(currentCard, -180, 0, 1.1, 1);
+      transformElements(lastCard, -500, -700);
+      transformElements(currentCard, -150, 0, 1.1, 1);
     }
 
     lastCard = currentCard
@@ -108,8 +108,6 @@
 
 <style>
 @import url('https://fonts.cdnfonts.com/css/fantasy');
-
-
 
 .container{
   position: relative;
@@ -174,10 +172,21 @@
 .txt-slider{
   position: absolute;
   width: 35%;
-  height: 40%;
+  height: 35%;
+  border: 1px solid white;
   top: 210px;
   left: 30px;
   /*overflow: hidden;*/
+}
+.txt-item{
+  position: relative;
+  transition: all 0.5s ease;
+  /*transform: translate(0, -30px);*/
+}
+.txt-item1{
+  position: relative;
+  transition: all 0.5s ease;
+  transform: translate(0, 50px);
 }
 .title{
   color: white;
@@ -194,17 +203,7 @@
   display: flex !important;
   margin: 10px 0 0 10px;
 }
-.txt-item{
-  position: relative;
-  transition: all 0.5s ease;
-  /*transform: translate(0, -30px);*/
 
-}
-.txt-item1{
-  position: absolute;
-  transition: all 0.5s ease;
-  transform: translate(0, 100px);
-}
 
 /*avatar box--------------------------------------------------------------------*/
 .avatars{
