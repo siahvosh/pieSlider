@@ -60,7 +60,7 @@
     console.log({currentCard: currentCard})
     console.log({len: textChild.length})
 
-    const transformElements = (index, yTranslate, xTranslate = 0, scale = 0.8, opacity = 0) => {
+    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0) => {
       textChild[index].style.transform = `translate(0, ${yTranslate}px)`;
       slideChild[index].style.transform = `translate(${xTranslate}px, 0)`;
       slideChild[index].style.scale = scale;
@@ -74,7 +74,7 @@
 
       }
       transformElements(lastCard, 200, 700);
-      transformElements(currentCard, 0, 0, 1.1, 1);
+      transformElements(currentCard, 0, 0, '', 1);
     }
     else {
       for(let i = 0; i < currentCard; i++) {
@@ -84,7 +84,7 @@
 
       }
       transformElements(lastCard, -200, -700);
-      transformElements(currentCard, 0, 0, 1.1, 1);
+      transformElements(currentCard, 0, 0, '', 1);
     }
 
     lastCard = currentCard
@@ -122,7 +122,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /*image slider--------------------------------------------------------------------*/
@@ -144,7 +144,7 @@
   position: relative;
   transform: translate(700px, 0);
   transition: all 0.3s ease;
-  scale: 0.8;
+  scale: 1.1;
 }
 .img-1{
   width: 230px;
