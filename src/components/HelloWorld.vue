@@ -68,18 +68,20 @@
     };
 
     if (lastCard > currentCard) {
-      for (let i = currentCard + 1; i < textChild.length; i++)
+      for (let i = currentCard + 1; i < textChild.length; i++) {
         slideChild[i].style.transform = "translateX(700px)"
-
-      transformElements(lastCard, 500, 700);
-      transformElements(currentCard, -150, 0, 1.1, 1);
+        // textChild[i].style.transform = "translateY(10px)";
+      }
+      transformElements(lastCard, 100, 700);
+      transformElements(currentCard, -100, 0, 1.1, 1);
     }
     else {
-      for(let i = 0; i < currentCard; i++)
+      for(let i = 0; i < currentCard; i++) {
         slideChild[i].style.transform = "translateX(-700px)"
-
-      transformElements(lastCard, -500, -700);
-      transformElements(currentCard, -150, 0, 1.1, 1);
+        // textChild[i].style.transform = "translateY(-10px)";
+      }
+      transformElements(lastCard, -100, -700);
+      transformElements(currentCard, 100, 0, 1.1, 1);
     }
 
     lastCard = currentCard
@@ -181,27 +183,33 @@
 .txt-item{
   position: relative;
   transition: all 0.5s ease;
-  /*transform: translate(0, -30px);*/
+  display: flex;
+  transform: translate(0, 100px);
+
+
 }
 .txt-item1{
   position: relative;
   transition: all 0.5s ease;
-  transform: translate(0, 50px);
+  transform: translate(0, 300px);
+  display: flex;
 }
 .title{
   color: white;
   font-weight: 800;
   letter-spacing: 2px;
   font-size: 50px;
-  margin: 20px 0 0 25px;
-  display: flex;
+  align-self: end;
+  /*margin: 20px 0 0 25px;*/
+  position: absolute;
   text-transform: uppercase;
 
 }
 .description{
+  position: absolute;
   color: white;
-  display: flex !important;
-  margin: 10px 0 0 10px;
+  align-self: start;
+  /*margin: 10px 0 0 10px;*/
 }
 
 
