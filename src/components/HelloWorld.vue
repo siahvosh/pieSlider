@@ -72,16 +72,16 @@
         slideChild[i].style.transform = "translateX(700px)"
         // textChild[i].style.transform = "translateY(-100px)";
       }
-      transformElements(lastCard, 100, 700);
-      transformElements(currentCard, -100, 0, 1.1, 1);
+      transformElements(lastCard, 200, 700);
+      transformElements(currentCard, 0, 0, 1.1, 1);
     }
     else {
       for(let i = 0; i < currentCard; i++) {
         slideChild[i].style.transform = "translateX(-700px)"
         // textChild[i].style.transform = "translateY(100px)";
       }
-      transformElements(lastCard, -100, -700);
-      transformElements(currentCard, 100, 0, 1.1, 1);
+      transformElements(lastCard, -200, -700);
+      transformElements(currentCard, 0, 0, 1.1, 1);
     }
 
     lastCard = currentCard
@@ -172,26 +172,28 @@
 
 /*text slider--------------------------------------------------------------------*/
 .txt-slider{
-  position: absolute;
+  position: relative;
   width: 35%;
   height: 35%;
-  /*border: 1px solid white;*/
+  border: 1px solid white;
   top: 210px;
   left: 30px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .txt-item{
   position: relative;
+  top: 100px;
   transition: all 0.5s ease;
   display: flex;
-  transform: translate(0, 100px);
+  /*transform: translate(0, 100px);*/
 
 
 }
 .txt-item1{
   position: relative;
+  top: 100px;
   transition: all 0.5s ease;
-  transform: translate(0, 300px);
+  transform: translate(0, 200px);
   display: flex;
   text-justify: initial;
 }
