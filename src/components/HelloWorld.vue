@@ -175,10 +175,10 @@
   position: absolute;
   width: 35%;
   height: 35%;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
   top: 210px;
   left: 30px;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .txt-item{
   position: relative;
@@ -193,6 +193,7 @@
   transition: all 0.5s ease;
   transform: translate(0, 300px);
   display: flex;
+  text-justify: initial;
 }
 .title{
   color: white;
