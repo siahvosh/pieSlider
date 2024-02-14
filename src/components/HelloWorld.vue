@@ -70,7 +70,8 @@
     if (lastCard > currentCard) {
       for (let i = currentCard + 1; i < textChild.length; i++) {
         slideChild[i].style.transform = "translateX(700px)"
-        // textChild[i].style.transform = "translateY(-100px)";
+        textChild[i].style.transform = "translateY(200px)";
+
       }
       transformElements(lastCard, 200, 700);
       transformElements(currentCard, 0, 0, 1.1, 1);
@@ -78,7 +79,9 @@
     else {
       for(let i = 0; i < currentCard; i++) {
         slideChild[i].style.transform = "translateX(-700px)"
-        // textChild[i].style.transform = "translateY(100px)";
+        textChild[i].style.transform = "translateY(-200px)";
+
+
       }
       transformElements(lastCard, -200, -700);
       transformElements(currentCard, 0, 0, 1.1, 1);
@@ -175,19 +178,16 @@
   position: relative;
   width: 35%;
   height: 35%;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
   top: 210px;
   left: 30px;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .txt-item{
   position: relative;
   top: 100px;
   transition: all 0.5s ease;
   display: flex;
-  /*transform: translate(0, 100px);*/
-
-
 }
 .txt-item1{
   position: relative;
