@@ -243,7 +243,8 @@ button:hover{
 .label::after{
   content: '';
   position: absolute;
-  border: 1px solid white;
+  height: 5px;
+  background-image: linear-gradient(to left, red, white);
   width:  99%;
   left: 0px;
   top: 80px;
