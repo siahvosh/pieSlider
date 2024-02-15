@@ -1,5 +1,6 @@
 <template>
   <div id="container" class="container">
+
     <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
           <span class="title">luffy fizz</span>
@@ -18,6 +19,7 @@
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
     </div>
+
     <div id="slider" class="pic-sliders">
       <div class="item">
         <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Luffy.png" alt="">
@@ -35,6 +37,11 @@
         <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Nami.png" alt="">
         <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Nami-can.png" alt="">
       </div>
+    </div>
+    <div style="position: absolute; bottom: 170px; left: 28px">
+      <button style="width: 400px; height: 50px; border-radius: 8px; background: #dcd9d9;">
+        <span>Set order</span>
+      </button>
     </div>
     <div class="avatars">
       <img @click="showCard(0)" class="avatar" src="file:///C:/Users/PC/Desktop/img-1/luffy-profile.png" alt="">
@@ -162,10 +169,11 @@
 .txt-slider{
   position: relative;
   width: 35%;
-  height: 35%;
+  height: 32%;
   top: 210px;
   left: 30px;
   overflow: hidden;
+  /*border: 2px solid red;*/
 }
 
 .txt-item, .txt-item-1{
@@ -194,7 +202,7 @@
   position: absolute;
   color: white;
   align-self: start;
-  /*margin: 10px 0 0 10px;*/
+  margin: 10px 0 0 0;
 }
 
 
