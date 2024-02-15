@@ -5,15 +5,15 @@
           <span class="title">luffy fizz</span>
           <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
-      <div class="txt-item1">
+      <div class="txt-item-1">
         <span class="title">zero zest</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
-      <div class="txt-item1">
+      <div class="txt-item-1">
         <span class="title">sanji spark</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
-      <div class="txt-item1">
+      <div class="txt-item-1">
         <span class="title">nami nectar</span>
         <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
       </div>
@@ -23,15 +23,15 @@
         <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Luffy.png" alt="">
         <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/luffy-can.png" alt="">
       </div>
-      <div class="item1">
-        <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Zoro.png" alt="">
-        <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Zoro-can.png" alt="">
+      <div class="item-1">
+        <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Zoro.png" alt="">
+        <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/Zoro-can.png" alt="">
       </div>
-      <div class="item1">
+      <div class="item-1">
         <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Sanji.png" alt="">
         <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Sanji-can.png" alt="">
       </div>
-      <div class="item1">
+      <div class="item-1">
         <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Nami.png" alt="">
         <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Nami-can.png" alt="">
       </div>
@@ -80,7 +80,7 @@
         textChild[i].style.transform = "translateY(-200px)";
 
       }
-      transformElements(lastCard, -200, -50);
+      transformElements(lastCard, -200, -700);
     }
     transformElements(currentCard, 0, 0, 1.1, 1);
 
@@ -133,42 +133,34 @@
   overflow: hidden;
 }
 
-.item, .item1{
+.item, .item-1{
   position: relative;
   transition: all 0.3s ease;
   scale: 1.1;
 }
 
-.item1 {
+.item-1 {
   transform: translate(700px, 0);
 }
 
-.img-1{
+.img-1, .img-3{
   width: 230px;
   position: absolute;
   left: 50px;
 }
-.img-2{
-  width: 250px;
-  scale: 1.2;
-  position: absolute;
-  right: 0;
-  margin: 55px 110px 0 0;
-}
 .img-3{
   width: 300px;
-  position: absolute;
-  left: 40px;
-  z-index: 1;
-
 }
-.img-4{
+
+.img-2, .img-4{
   width: 250px;
   scale: 1.2;
   position: absolute;
   right: 0;
   margin: 55px 110px 0 0;
 }
+
+
 
 /*text slider--------------------------------------------------------------------*/
 .txt-slider{
@@ -180,15 +172,14 @@
   overflow: hidden;
 }
 
-.txt-item, .txt-item1{
+.txt-item, .txt-item-1{
   position: relative;
   top: 100px;
   transition: all 0.5s ease;
   display: flex;
-
 }
 
-.txt-item1{
+.txt-item-1{
   transform: translate(0, 200px);
 }
 
