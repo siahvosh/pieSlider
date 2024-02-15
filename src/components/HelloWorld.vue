@@ -37,9 +37,13 @@
       </div>
     </div>
     <div style="position: absolute; bottom: 160px; left: 28px">
-      <button style="width: 400px; height: 50px; border-radius: 5px; background: #ffffff;">
-        <span>Set order</span>
+      <button style="width: 400px; height: 50px; border-radius: 5px; background: #eae4e4;">
+        buy now
+        <svg style="transform: translate(5px, 2px)" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2s2-.9 2-2s-.9-2-2-2m-1.45-5c.75 0 1.41-.41 1.75-1.03l3.58-6.49A.996.996 0 0 0 20.01 4H5.21l-.94-2H1v2h2l3.6 7.59l-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2zM6.16 6h12.15l-2.76 5H8.53z"/></svg>
       </button>
+    </div>
+    <div style="position: absolute; top: 150px; left: 200px">
+        <span>Set order</span>
     </div>
     <div class="avatars">
       <img @click="showCard(0)" class="avatar" src="file:///C:/Users/PC/Desktop/img-1/luffy-profile.png" alt="">
@@ -51,6 +55,8 @@
 </template>
 
 <script setup>
+
+
   let currentCard = 0
   let lastCard = 0
 
@@ -167,7 +173,7 @@
 .txt-slider{
   position: relative;
   width: 35%;
-  height: 32%;
+  height: 33%;
   top: 210px;
   left: 30px;
   overflow: hidden;
@@ -176,7 +182,7 @@
 
 .txt-item, .txt-item-1{
   position: relative;
-  top: 100px;
+  top: 85px;
   transition: all 0.3s ease;
   display: flex;
 }
