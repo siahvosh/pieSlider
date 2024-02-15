@@ -24,8 +24,8 @@
         <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/luffy-can.png" alt="">
       </div>
       <div class="item-1">
-        <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Zoro.png" alt="">
-        <img class="img-2" src="file:///C:/Users/PC/Desktop/img-1/Zoro-can.png" alt="">
+        <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Zoro.png" alt="">
+        <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Zoro-can.png" alt="">
       </div>
       <div class="item-1">
         <img class="img-3" src="file:///C:/Users/PC/Desktop/img-1/Sanji.png" alt="">
