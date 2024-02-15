@@ -71,21 +71,18 @@
       for (let i = currentCard + 1; i < textChild.length; i++) {
         slideChild[i].style.transform = "translateX(700px)"
         textChild[i].style.transform = "translateY(200px)";
-
       }
       transformElements(lastCard, 200, 700);
-      transformElements(currentCard, 0, 0, '', 1);
     }
     else {
       for(let i = 0; i < currentCard; i++) {
         slideChild[i].style.transform = "translateX(-700px)"
         textChild[i].style.transform = "translateY(-200px)";
 
-
       }
-      transformElements(lastCard, -200, -700);
-      transformElements(currentCard, 0, 0, '', 1);
+      transformElements(lastCard, -200, -50);
     }
+    transformElements(currentCard, 0, 0, 1.1, 1);
 
     lastCard = currentCard
 
@@ -135,17 +132,17 @@
   transform: translate(-50%, -50%);
   overflow: hidden;
 }
-.item{
+
+.item, .item1{
   position: relative;
-  transition: all 0.4s ease;
-  scale: 1.1;
-}
-.item1 {
-  position: relative;
-  transform: translate(700px, 0);
   transition: all 0.3s ease;
   scale: 1.1;
 }
+
+.item1 {
+  transform: translate(700px, 0);
+}
+
 .img-1{
   width: 230px;
   position: absolute;
@@ -178,25 +175,23 @@
   position: relative;
   width: 35%;
   height: 35%;
-  /*border: 1px solid white;*/
   top: 210px;
   left: 30px;
   overflow: hidden;
 }
-.txt-item{
+
+.txt-item, .txt-item1{
   position: relative;
   top: 100px;
   transition: all 0.5s ease;
   display: flex;
+
 }
+
 .txt-item1{
-  position: relative;
-  top: 100px;
-  transition: all 0.5s ease;
   transform: translate(0, 200px);
-  display: flex;
-  text-justify: initial;
 }
+
 .title{
   color: white;
   font-weight: 800;
