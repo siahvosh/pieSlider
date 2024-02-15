@@ -1,25 +1,23 @@
 <template>
   <div id="container" class="container">
-
     <div id="txt-slider" class="txt-slider">
       <div class="txt-item">
           <span class="title">luffy fizz</span>
-          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis dignissimos dolorum eos et eum harum ipsam, omnis, quaerat soluta tempora tempore! Molestias, officiis vitae! Alias deleniti eaque possimus tenetur?</span>
       </div>
       <div class="txt-item-1">
         <span class="title">zero zest</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis dignissimos dolorum eos et eum harum ipsam, omnis, quaerat soluta tempora tempore! Molestias, officiis vitae! Alias deleniti eaque possimus tenetur?</span>
       </div>
       <div class="txt-item-1">
         <span class="title">sanji spark</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis dignissimos dolorum eos et eum harum ipsam, omnis, quaerat soluta tempora tempore! Molestias, officiis vitae! Alias deleniti eaque possimus tenetur?</span>
       </div>
       <div class="txt-item-1">
         <span class="title">nami nectar</span>
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. Aliquid consequuntur dolor dolorem ex quos, voluptatem.</span>
+        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium debitis dignissimos dolorum eos et eum harum ipsam, omnis, quaerat soluta tempora tempore! Molestias, officiis vitae! Alias deleniti eaque possimus tenetur?</span>
       </div>
     </div>
-
     <div id="slider" class="pic-sliders">
       <div class="item">
         <img class="img-1" src="file:///C:/Users/PC/Desktop/img-1/Luffy.png" alt="">
@@ -38,8 +36,8 @@
         <img class="img-4" src="file:///C:/Users/PC/Desktop/img-1/Nami-can.png" alt="">
       </div>
     </div>
-    <div style="position: absolute; bottom: 170px; left: 28px">
-      <button style="width: 400px; height: 50px; border-radius: 8px; background: #dcd9d9;">
+    <div style="position: absolute; bottom: 160px; left: 28px">
+      <button style="width: 400px; height: 50px; border-radius: 5px; background: #ffffff;">
         <span>Set order</span>
       </button>
     </div>
