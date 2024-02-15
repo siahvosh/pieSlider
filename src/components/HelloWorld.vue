@@ -60,29 +60,25 @@
     console.log({currentCard: currentCard})
     console.log({len: textChild.length})
 
-    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0) => {
+    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0, tOpacity = 1) => {
       textChild[index].style.transform = `translate(0, ${yTranslate}px)`;
+      textChild[index].style.opacity = tOpacity;
       slideChild[index].style.transform = `translate(${xTranslate}px, 0)`;
       slideChild[index].style.scale = scale;
       slideChild[index].style.opacity = opacity;
     };
 
     if (lastCard > currentCard) {
-      for (let i = currentCard + 1; i < textChild.length; i++) {
-        slideChild[i].style.transform = "translateX(700px)"
-        textChild[i].style.transform = "translateY(200px)";
-      }
+      for (let i = currentCard + 1; i < textChild.length; i++)
+        transformElements(i, 200, 700);
       transformElements(lastCard, 200, 700);
     }
     else {
-      for(let i = 0; i < currentCard; i++) {
-        slideChild[i].style.transform = "translateX(-700px)"
-        textChild[i].style.transform = "translateY(-200px)";
-
-      }
+      for(let i = 0; i < currentCard; i++)
+        transformElements(i, -200, -700);
       transformElements(lastCard, -200, -700);
     }
-    transformElements(currentCard, 0, 0, 1.1, 1);
+    transformElements(currentCard, 0, 0, 1.1, 1, 1);
 
     lastCard = currentCard
 
@@ -175,7 +171,7 @@
 .txt-item, .txt-item-1{
   position: relative;
   top: 100px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   display: flex;
 }
 
