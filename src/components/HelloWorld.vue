@@ -233,7 +233,7 @@
 }
 .avatar{
   border-radius: 180%;
-  width: 100px;
+  width: 90px;
   object-fit: cover;
   align-self: center;
   border: 1px solid grey;
