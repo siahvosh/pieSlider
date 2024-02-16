@@ -95,6 +95,8 @@
 
     avatar[currentCard].style.width = "120px"
     avatar[lastCard].style.width = "100px"
+    avatar[lastCard].style.filter = "grayscale(90%)"
+    avatar[currentCard].style.filter = "grayscale(0)"
     transformElements(currentCard, 0, 0, 1.1, 1, 1);
 
     lastCard = currentCard
@@ -234,9 +236,10 @@
 .avatar{
   border-radius: 180%;
   width: 90px;
+  filter: grayscale(90%);
   object-fit: cover;
   align-self: center;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   cursor: pointer;
   transition: all .5s ease;
 }
