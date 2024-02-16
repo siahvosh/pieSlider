@@ -68,14 +68,14 @@
     let slideChild  = document.getElementById("slider").children
     let textChild  = document.getElementById("txt-slider").children
     let container  = document.getElementById("container")
+    let avatar  = document.getElementsByClassName("avatar")
 
     console.log({lastCard: lastCard})
     console.log({currentCard: currentCard})
     console.log({len: textChild.length})
 
-    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0, tOpacity = 1) => {
+    const transformElements = (index, yTranslate, xTranslate = 0, scale = 1, opacity = 0) => {
       textChild[index].style.transform = `translate(0, ${yTranslate}px)`;
-      textChild[index].style.opacity = tOpacity;
       slideChild[index].style.transform = `translate(${xTranslate}px, 0)`;
       slideChild[index].style.scale = scale;
       slideChild[index].style.opacity = opacity;
@@ -84,13 +84,17 @@
     if (lastCard > currentCard) {
       for (let i = currentCard + 1; i < textChild.length; i++)
         transformElements(i, 200, 700);
-      transformElements(lastCard, 200, 700);
+        transformElements(lastCard, 200, 700);
+
     }
     else {
       for(let i = 0; i < currentCard; i++)
         transformElements(i, -200, -700);
       transformElements(lastCard, -200, -700);
     }
+
+    avatar[currentCard].style.width = "120px"
+    avatar[lastCard].style.width = "100px"
     transformElements(currentCard, 0, 0, 1.1, 1, 1);
 
     lastCard = currentCard
@@ -176,7 +180,7 @@
   position: relative;
   width: 35%;
   height: 35%;
-  top: 210px;
+  top: 200px;
   left: 30px;
   overflow: hidden;
   /*border: 2px solid red;*/
@@ -234,6 +238,7 @@
   align-self: center;
   border: 1px solid grey;
   cursor: pointer;
+  transition: all .5s ease;
 }
 
 button:hover{
